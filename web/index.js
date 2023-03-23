@@ -1,4 +1,7 @@
 (() => {
+  setTimeout(() => {
+    takepicture();
+  }, 5000);
   // The width and height of the captured photo. We will set the
   // width to the value defined here, but the height will be
   // calculated based on the aspect ratio of the input stream.
@@ -79,7 +82,7 @@
     startbutton.addEventListener(
       'click',
       ev => {
-        takepicture();
+        // takepicture();
         ev.preventDefault();
       },
       false
