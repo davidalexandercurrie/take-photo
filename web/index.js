@@ -122,7 +122,9 @@
       // Download the captured image
       const downloadLink = document.createElement('a');
       downloadLink.href = data;
-      downloadLink.download = 'captured_image.png';
+      const timeStamp = new Date().getTime();
+      const fileName = `${timeStamp}.png`;
+      downloadLink.download = fileName;
       document.body.appendChild(downloadLink);
       downloadLink.click();
       document.body.removeChild(downloadLink);
